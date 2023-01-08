@@ -12,7 +12,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, TestMod.MOD_ID);
 
-    public static final RegistryObject<Item> CUTDIAMOND = ITEMS.register("cut_diamond",
+    public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
+            () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
     public static void register(IEventBus eventBus) {
