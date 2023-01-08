@@ -25,6 +25,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
+import static com.wkhan.testmod.item.ModItems.RAW_ZIRCON;
+import static com.wkhan.testmod.item.ModItems.ZIRCON;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TestMod.MOD_ID)
 public class TestMod {
@@ -40,7 +43,15 @@ public class TestMod {
 
         MinecraftForge.EVENT_BUS.register(this);
 
+        modEventBus.addListener(this::addCreative);
+    }
 
+    private void addCreative(CreativeModeTabEvent.BuildContents event)
+    {
+        if (event.getTab() == CreativeModeTabs.INGREDIENTS)
+            event.accept(ZIRCON);
+        if (event.getTab() == CreativeModeTabs.INGREDIENTS)
+            event.accept(RAW_ZIRCON);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
