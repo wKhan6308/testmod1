@@ -26,11 +26,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ZIRCON_ORE = registerBlock("zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(),
+                    .strength(3f).requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)));
     public static final RegistryObject<Block> DEEPSLATE_ZIRCON_ORE = registerBlock("deepslate_zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(),
+                    .strength(4.5f).requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)));
 
 

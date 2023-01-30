@@ -3,6 +3,7 @@ package com.wkhan.testmod;
 import com.mojang.logging.LogUtils;
 import com.wkhan.testmod.block.ModBlocks;
 import com.wkhan.testmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+import static com.wkhan.testmod.block.ModBlocks.*;
 import static com.wkhan.testmod.item.ModItems.RAW_ZIRCON;
 import static com.wkhan.testmod.item.ModItems.ZIRCON;
 
@@ -44,6 +46,12 @@ public class TestMod {
             event.accept(ZIRCON);
         if (event.getTab() == CreativeModeTabs.INGREDIENTS)
             event.accept(RAW_ZIRCON);
+        if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS)
+            event.accept(ZIRCON_ORE);
+        if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS)
+            event.accept(DEEPSLATE_ZIRCON_ORE);
+        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
+            event.accept(ZIRCON_BLOCK);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
