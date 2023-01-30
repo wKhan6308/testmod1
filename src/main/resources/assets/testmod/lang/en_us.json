@@ -1,6 +1,7 @@
 {
   "item.testmod.zircon": "Zircon",
   "item.testmod.raw_zircon": "Raw Zircon",
+  "item.testmod.life_crystal": "Life Crystal",
 
   "block.testmod.zircon_block": "Zircon Block",
   "block.testmod.zircon_ore": "Zircon Ore",

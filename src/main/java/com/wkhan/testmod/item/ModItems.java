@@ -1,6 +1,7 @@
 package com.wkhan.testmod.item;
 
 import com.wkhan.testmod.TestMod;
+import com.wkhan.testmod.item.custom.LifeCrystalItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,6 +17,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
             () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final RegistryObject<Item> LIFE_CRYSTAL = ITEMS.register("life_crystal",
+            () -> new LifeCrystalItem(new Item.Properties().stacksTo(64)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
